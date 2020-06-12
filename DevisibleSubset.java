@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class DevisibleSubset {
+//By piegonHole principle
     public int prearray(int array[]){
         int newarr[]=new int[array.length+1];
         newarr[0]=1;
