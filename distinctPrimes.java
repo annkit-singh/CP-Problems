@@ -1,7 +1,10 @@
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.*;
 
- public class spoj {
+  class spoj {
      public  int distinctPrime(int n){
          int MAX=3000;
          Integer []prime=new Integer[MAX];
@@ -31,18 +34,21 @@ import java.lang.*;
      
 
 
-     public static void main(String[] args){
-         Scanner sc=new Scanner(System.in);
+     public static void main(String[] args) throws IOException{
+        //  Scanner sc=new Scanner(System.in);
          spoj s=new spoj();
-         int t=sc.nextInt();
+
+         BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
+
+         int t=Integer.parseInt(bf.readLine());
          while(t--!=0){
-             int n=sc.nextInt();
-     
-        System.out.println(s.distinctPrime(n));
- 
+         int n=Integer.parseInt(bf.readLine());
+        System.out.println( s.distinctPrime(n));
+
          }
-         sc.close();
-         
+
+       
+
 
      
     
