@@ -19,6 +19,7 @@ class TestClass {
         for (int i = 0; i < inputString.length(); i++) { 
             tempArray[i] = inputString.charAt(i); 
         } 
+//Arrays.sort(tempArray,Collections.reverseOrder())
         Arrays.sort(tempArray, new Comparator<Character>(){ 
     
             public int compare(Character c1, Character c2) 
