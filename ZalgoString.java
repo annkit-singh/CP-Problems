@@ -19,11 +19,13 @@ class TestClass{
               right--;
           }
           else{
+          	// To copy elements of the prefix or to the previous Z box
               int k1=k-left;
               if(Z[k1]<right-k+1){
                   Z[k]=Z[k1];
 
               }
+              // for further or future matches in the string if k1 is out of the z box
               else{
                   left=k;
                   while(right<input.length && input[right]==input[right-left]){
@@ -47,6 +49,7 @@ class TestClass{
       for(char c:pattern){
           newStr[i++]=c;  
       }
+      // for separation the two strings
       newStr[i++]='#';
       
       for(char c:text){
