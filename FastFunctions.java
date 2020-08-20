@@ -79,7 +79,9 @@ import java.math.BigInteger;
         	for(int i = 0; i<n; i++)res[i] = nextLong();
         	return res;
         }
-    } 
+    }
+
+    // FastReader ENDS HERE All other methods are static
 	
 	static int ceil(int x,int y) {
 		return (x % y == 0 ? x / y : (x / y +1));
