@@ -4,17 +4,17 @@ public class Kadane {
 
     public int KadaneAlgo(int array[]){
         int currSum=0;
-        int maxSum=0;
+        int maxSum=Integer.MIN_VALUE;
         for(int i=0;i<array.length;i++){
-            curr+=array[i];
-            if(curr>max){
-                max=curr;
+            currSum+=array[i];
+            if(currSum>maxSum){
+                maxSum=currSum;
             }
-            if(curr<0){
-                curr=0;
+          if(currSum<0){
+                currSum=0;
             }
              }
-             return max;
+             return maxSum;
     }
     public static void main(String [] args){
         Kadane k=new Kadane();
