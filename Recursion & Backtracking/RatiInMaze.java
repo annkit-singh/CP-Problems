@@ -45,7 +45,8 @@ class Rat{
         int solution[][]=new int [matrix.length][matrix.length];
         n.ratInMaze(matrix, solution, 0, 0);
 
-
+// Time Complexity: O(2^(n^2)): The recursion can run upper bound 2^(n^2) times.
+//  Space Complexity: O(n^2): Output matrix is required so an extra space of size n*n is needed.
         
 
     }
