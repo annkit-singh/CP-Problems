@@ -70,15 +70,25 @@ import java.math.BigInteger;
         } 
         
         int [] readintarray(int n) {
-        	int res [] = new int [n];
-        	for(int i = 0; i<n; i++)res[i] = nextInt();
-        	return res;
-        }
-        long [] readlongarray(int n) {
-        	long res [] = new long [n];
-        	for(int i = 0; i<n; i++)res[i] = nextLong();
-        	return res;
-        }
+         int res [] = new int [n];
+         for(int i = 0; i<n; i++)res[i] = nextInt();
+         return res;
+     }
+     Integer [] readIntegerArray(int n) {
+        Integer res [] = new Integer [n];
+        for(int i = 0; i<n; i++)res[i] = nextInt();
+        return res;
+    }
+     long [] readlongarray(int n) {
+         long res [] = new long [n];
+         for(int i = 0; i<n; i++)res[i] = nextLong();
+         return res;
+     }
+     Long [] readLongArray(int n) {
+        Long res [] = new Long [n];
+        for(int i = 0; i<n; i++)res[i] = nextLong();
+        return res;
+    }
     }
 
     // FastReader ENDS HERE All other methods are static
