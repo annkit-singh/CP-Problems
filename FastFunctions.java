@@ -4,11 +4,10 @@ import java.io.*;
 import java.math.BigInteger;
 
  class Demo {
-  static  FastReader fr=new FastReader();
+  ``static  FastReader fr=new FastReader();
 
-   public static void main(String[]args){
-    String s=fr.nextLine();
-   System.out.println(s);
+   `public static void main(String[]args){
+    
    }
 
  
