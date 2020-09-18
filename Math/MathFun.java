@@ -112,6 +112,83 @@ static int modInverse(int a, int m)
         return count;
 
     }
+   public HashSet<Integer> printPrimeFactors(int n){
+
+        HashSet <Integer> hs=new HashSet<>();
+        while(n%2==0){
+            hs.add(2);
+            n=n/2;
+
+        }
+        for(int i=3;i<=Math.sqrt(n);i=i+2){
+            while(n%i==0){
+                hs.add(i);
+                n=n/i;
+
+            }
+        }
+        if(n>2){
+            hs.add(n);
+        }
+        return hs;
+    }
+
+    public HashSet<Integer> printAlldivisors(int  n){
+ HashSet <Integer> hs=new HashSet<>();
+        for(int i=1;i<=Math.sqrt(n);i++  ){
+            if(n%i==0){
+                if (n/i==i){
+                hs.add(i);
+                }
+                else{
+                    hs.add(i);
+                    hs.add(n/i);
+                }
+        }
+    }
+        return hs;
+    }
+
+
+    public HashSet<Integer> primeFromSeive(int n){
+        HashSet<Integer> hs = new HashSet<>();
+    for(int i=2;i<=Math.sqrt(n);i++){
+        while(n%i==0){
+            hs.add(i);
+            n=n/i;
+
+        }
+    }
+    if(n!=1){
+        hs.add(n);
+    }
+    return hs;
+
+    }
+
+    public HashSet<BigInteger> factorizationBig(BigInteger n) {
+        HashSet<BigInteger> v = new HashSet<BigInteger>();
+        BigInteger i = new BigInteger("2");
+        BigInteger zero = new BigInteger("0");
+        BigInteger one = new BigInteger("1");
+
+        while (i.compareTo(n.sqrt()) <= 0) {
+
+            while (n.mod(i).compareTo(zero) == 0) {
+                v.add(i);
+                n = n.divide(i);
+
+            }
+            i = i.add(one);
+        }
+
+        if (!n.equals(one)) {
+            v.add(n);
+        }
+        return v;
+    }
+
+  
    
    
 
